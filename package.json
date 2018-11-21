@@ -4,8 +4,9 @@
   "description": "Virutal stickies. Hierarchical, stickies can have never ending stickies attched to them.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start":"http-server ./public"
+    "test": "NODE_OPTIONS=\"-r @std/esm --experimental-modules\" tape tests/**/*.mjs | node_modules/.bin/tap-spec",
+    "test:one": "NODE_OPTIONS=\"-r @std/esm --experimental-modules\" nodemon tape",
+    "start": "http-server ./public"
   },
   "keywords": [
     "stickies",
@@ -18,9 +19,22 @@
   "author": "Joey Guerra",
   "license": "ISC",
   "dependencies": {
+    "@std/esm": "^0.26.0",
     "express": "^4.16.4"
   },
   "devDependencies": {
-    "http-server": "^0.11.1"
+    "http-server": "^0.11.1",
+    "jsdom": "^13.0.0",
+    "jsdom-devtools-formatter": "^1.0.0",
+    "nodemon": "^1.18.6",
+    "tap-spec": "^5.0.0",
+    "tape": "^4.9.1"
+  },
+  "@std/esm": "cjs",
+  "nodemonConfig": {
+    "ignore": [
+      "tests/*",
+      "data/*"
+    ]
   }
 }
