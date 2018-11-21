@@ -1,0 +1,26 @@
+{
+  "name": "neverendingstickies",
+  "version": "1.0.0",
+  "description": "Virutal stickies. Hierarchical, stickies can have never ending stickies attched to them.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"http-server ./public"
+  },
+  "keywords": [
+    "stickies",
+    "agile",
+    "kanban",
+    "boards",
+    "online",
+    "notes"
+  ],
+  "author": "Joey Guerra",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4"
+  },
+  "devDependencies": {
+    "http-server": "^0.11.1"
+  }
+}
