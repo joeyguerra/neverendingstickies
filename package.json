@@ -7,7 +7,7 @@
     "test": "NODE_OPTIONS=\"-r @std/esm --experimental-modules\" tape tests/**/*.mjs | node_modules/.bin/tap-spec",
     "test:one": "NODE_OPTIONS=\"-r @std/esm --experimental-modules\" nodemon tape",
     "start": "http-server ./dist",
-    "build": "webpack -d"
+    "build": "webpack -d && cp ./dist/*.* ./docs/"
   },
   "keywords": [
     "stickies",
