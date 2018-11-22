@@ -3,30 +3,11 @@ import {JSDOM, VirtualConsole} from "jsdom"
 import fs from "fs"
 import path from "path"
 import App from "../lib/App.mjs"
-<<<<<<< HEAD
-
 const file = fs.promises
 const MakeDom = data => {
     let c = new VirtualConsole()
     c.sendTo(console)
     return new JSDOM(data, {
-=======
-import devToolsFormatter from "jsdom-devtools-formatter"
-
-const file = fs.promises
-tape("Main app test suite", async t => {
-    let data = null
-    let c = new VirtualConsole()
-    c.sendTo(console)
-    devToolsFormatter.install()
-
-    try {
-        data = await file.readFile(path.join(__dirname, "../public/index.html"), {encoding: "utf-8"})
-    } catch(e) {
-        console.error(e)
-    }
-    let dom = new JSDOM(data, {
->>>>>>> some tests passing
         url: "https://example.org/",
         referrer: "https://example.com/",
         contentType: "text/html",
@@ -34,7 +15,6 @@ tape("Main app test suite", async t => {
         storageQuota: 10000000,
         pretendToBeVisual: true
     })
-<<<<<<< HEAD
 }
 
 tape("Adding a sticky", async t => {
@@ -128,13 +108,6 @@ tape("Traversing Bread Crumbs", async t => {
     t.equal(App.views.length, 3, "Should be 3 stickies on this board.")
     App.views[0].closeButton.click()
     t.equal(App.views.length, 0, "Closing the board sticky should remove all stickies.")
-=======
-    App.open(dom.window)
-    App.addStickyButton.click()
-    t.equals(App.views.length, 1, "Should have a sticky.")
-    App.model.notes[0].text = "Just adding some text"
-    t.equal(App.views[0].textarea.value, App.model.notes[0].text, "Setting text should show in the view textarea.")
->>>>>>> some tests passing
     dom.window.close()
     t.end()
 })
