@@ -91,4 +91,24 @@ tape("Bread Crumbs", async t => {
     t.end()
 })
 
-
+tape("Traversing Bread Crumbs", async t => {
+    let data = null
+    try {
+        data = await file.readFile(path.join(__dirname, "../public/index.html"), {encoding: "utf-8"})
+    } catch(e) {
+        console.error(e)
+    }
+    let dom = MakeDom(data)
+    App.open(dom.window)
+    App.addStickyButton.click()
+    let event = new dom.window.Event("HTMLEvents")
+    event.initEvent("dblclick", true, false)
+    App.views[0].header.dispatchEvent(event)
+    App.addStickyButton.click()
+    App.addStickyButton.click()
+    t.equal(App.views.length, 3, "Should be 3 stickies on this board.")
+    App.views[0].closeButton.click()
+    t.equal(App.views.length, 0, "Closing the board sticky should remove all stickies.")
+    dom.window.close()
+    t.end()
+})
