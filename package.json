@@ -6,8 +6,12 @@
   "scripts": {
     "test": "NODE_OPTIONS=\"-r @std/esm --experimental-modules\" tape tests/**/*.mjs | node_modules/.bin/tap-spec",
     "test:one": "NODE_OPTIONS=\"-r @std/esm --experimental-modules\" nodemon tape",
+<<<<<<< HEAD
     "start": "http-server ./dist",
     "build": "webpack -d"
+=======
+    "start": "http-server ./public"
+>>>>>>> some tests passing
   },
   "keywords": [
     "stickies",
@@ -24,15 +28,22 @@
     "express": "^4.16.4"
   },
   "devDependencies": {
+<<<<<<< HEAD
     "html-webpack-plugin": "^3.2.0",
+=======
+>>>>>>> some tests passing
     "http-server": "^0.11.1",
     "jsdom": "^13.0.0",
     "jsdom-devtools-formatter": "^1.0.0",
     "nodemon": "^1.18.6",
     "tap-spec": "^5.0.0",
+<<<<<<< HEAD
     "tape": "^4.9.1",
     "webpack": "^4.26.0",
     "webpack-cli": "^3.1.2"
+=======
+    "tape": "^4.9.1"
+>>>>>>> some tests passing
   },
   "@std/esm": "cjs",
   "nodemonConfig": {
