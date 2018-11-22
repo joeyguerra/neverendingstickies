@@ -111,3 +111,27 @@ tape("Traversing Bread Crumbs", async t => {
     dom.window.close()
     t.end()
 })
+
+
+tape("Bread Crumbs", async t => {
+    let data = null
+    try {
+        data = await file.readFile(path.join(__dirname, "../public/index.html"), {encoding: "utf-8"})
+    } catch(e) {
+        console.error(e)
+    }
+    let dom = MakeDom(data)
+    App.open(dom.window)
+    App.addStickyButton.click()
+    App.addStickyButton.click()
+    let event = new dom.window.Event("HTMLEvents")
+    event.initEvent("dblclick", true, false)
+    App.views[0].header.dispatchEvent(event)
+    t.equal(App.views.length, 1, "Double clicking on the header of a sticky should create a new board, drill down so to speak.")
+    t.equal(App.model.notes[0].id, App.views[0].model.id, "The only note on the board should be the same.")
+    t.equal(App.model.breadCrumbs[0].id, App.model.notes[0].id, "The bread crumbs should include the parent sticky.")
+    dom.window.close()
+    t.end()
+})
+
+
