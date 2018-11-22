@@ -6,6 +6,7 @@ This is never ending stickies, where the stickies never end. Just double click o
 
 ```bash
 npm i
+npm test
 npm run build
 npm start
 ```
