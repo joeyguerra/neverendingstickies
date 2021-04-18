@@ -2,7 +2,6 @@ const HtmlWebpackPlugin = require("html-webpack-plugin")
 const path = require("path")
 module.exports = {
     mode: "production",
-    entry: "./lib/App.mjs",
     output: {
         libraryTarget: "var",
         library: "App"
@@ -10,7 +9,7 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             title: "Main Page",
-            template: path.join(__dirname, "/public/index.html")
+            template: path.join(__dirname, "/views/index.html")
         })
     ]
 }
