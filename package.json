@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node server.mjs",
     "test": "mocha --parallel examples/**/*.mjs",
-    "test:watch": "mocha --watch --parallel"
+    "test:watch": "mocha --watch --parallel",
+    "build": "node build.mjs"
   },
   "dependencies": {
     "express": "^4.17.1"
