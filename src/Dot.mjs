@@ -1,4 +1,4 @@
-import Command from "../lib/Command.js"
+import Command from "../lib/Command.mjs"
 
 class Dot {
   constructor(container, model, delegate){

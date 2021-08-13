@@ -1,6 +1,6 @@
-import Mover from "./Mover.js"
-import Command from "../lib/Command.js"
-import Dot from "./Dot.js"
+import Mover from "./Mover.mjs"
+import Command from "../lib/Command.mjs"
+import Dot from "./Dot.mjs"
 
 class Sticky {
   constructor(container, model, delegate){

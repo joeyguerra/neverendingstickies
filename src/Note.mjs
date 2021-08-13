@@ -1,4 +1,4 @@
-import MakeObservableList from "../lib/MakeObservableList.js"
+import MakeObservableList from "../lib/MakeObservableList.mjs"
 
 const uuid = () => {
     return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
