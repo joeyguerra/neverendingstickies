@@ -25,7 +25,7 @@ describe('NeverEndingStickies', ()=>{
     it("Adding a sticky", async () => {
         let data = null
         try {
-            data = await file.readFile(path.join(__dirname, "../public/index.html"), {encoding: "utf-8"})
+            data = await file.readFile(path.join(__dirname, "../docs/index.html"), {encoding: "utf-8"})
         } catch(e) {
             console.error(e)
         }
@@ -41,7 +41,7 @@ describe('NeverEndingStickies', ()=>{
     it("Move a sticky", async () => {
         let data = null
         try {
-            data = await file.readFile(path.join(__dirname, "../public/index.html"), {encoding: "utf-8"})
+            data = await file.readFile(path.join(__dirname, "../docs/index.html"), {encoding: "utf-8"})
         } catch(e) {
             console.error(e)
         }
@@ -58,7 +58,7 @@ describe('NeverEndingStickies', ()=>{
     it("Close a sticky", async () => {
         let data = null
         try {
-            data = await file.readFile(path.join(__dirname, "../public/index.html"), {encoding: "utf-8"})
+            data = await file.readFile(path.join(__dirname, "../docs/index.html"), {encoding: "utf-8"})
         } catch(e) {
             console.error(e)
         }
@@ -74,7 +74,7 @@ describe('NeverEndingStickies', ()=>{
     it("Bread Crumbs", async () => {
         let data = null
         try {
-            data = await file.readFile(path.join(__dirname, "../public/index.html"), {encoding: "utf-8"})
+            data = await file.readFile(path.join(__dirname, "../docs/index.html"), {encoding: "utf-8"})
         } catch(e) {
             console.error(e)
         }
@@ -94,7 +94,7 @@ describe('NeverEndingStickies', ()=>{
     it("Traversing Bread Crumbs", async () => {
         let data = null
         try {
-            data = await file.readFile(path.join(__dirname, "../public/index.html"), {encoding: "utf-8"})
+            data = await file.readFile(path.join(__dirname, "../docs/index.html"), {encoding: "utf-8"})
         } catch(e) {
             console.error(e)
         }
@@ -116,7 +116,7 @@ describe('NeverEndingStickies', ()=>{
     it("Bread Crumbs", async () => {
         let data = null
         try {
-            data = await file.readFile(path.join(__dirname, "../public/index.html"), {encoding: "utf-8"})
+            data = await file.readFile(path.join(__dirname, "../docs/index.html"), {encoding: "utf-8"})
         } catch(e) {
             console.error(e)
         }
