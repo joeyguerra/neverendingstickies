@@ -13,7 +13,7 @@
     "express": "^4.17.1"
   },
   "devDependencies": {
-    "jsdom": "^13.2.0",
+    "jsdom": "^16.5.0",
     "mocha": "^9.0.3"
   },
   "engines": {
