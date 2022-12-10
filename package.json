@@ -10,7 +10,7 @@
     "build": "node build.mjs"
   },
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.3"
   },
   "devDependencies": {
     "jsdom": "^13.2.0",
